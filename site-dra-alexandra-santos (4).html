@@ -398,36 +398,44 @@ section {
 
 /* ===== ABOUT ===== */
 .about {
-  background: var(--white);
+  position: relative;
+  min-height: 100vh;
   display: flex;
-  gap: 100px;
-  align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
+  align-items: stretch;
+  padding: 0 !important;
+  overflow: hidden;
+  background: var(--white);
 }
 
 .about-image {
-  flex: 0 0 400px;
+  flex: 0 0 55%;
   position: relative;
+  overflow: hidden;
 }
 
 .about-image img {
- width: 100%;
-  height: 550px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: center top;
+  display: block;
 }
 
 .about-image::after {
   content: '';
   position: absolute;
-  bottom: -16px;
-  left: -16px;
-  width: 120px;
+ left: -20px;       /* Joga para a esquerda */
+  bottom: -20px;     /* Joga para baixo */
+  
+  /* TAMANHO DO "L" */
+  width: 120px; 
   height: 120px;
-  border-left: 2px solid var(--gold);
-  border-bottom: 2px solid var(--gold);
-  opacity: 0.4;
+  
+  /* O DESENHO DA MOLDURA */
+  border-left: 1px solid #bfa36a;
+  border-bottom: 1px solid #bfa36a;
+  
+  z-index: -1;       /* Garante que fique atrás da foto */
 }
 
 .about-text-wrapper {
@@ -1179,7 +1187,7 @@ footer {
 <section id="sobre" class="about" style="display: flex; align-items: flex-start; gap: 60px; flex-wrap: wrap; padding: 60px 0;">
   
   <div class="about-image" style="flex: 0 0 400px; max-width: 400px; margin: 0;">
-    <img src="https://vitapelleclinica-zmuic.wpcomstaging.com/wp-content/uploads/2026/03/IMG_0683-e1773019415857.jpeg" 
+    <img src="https://vitapelleclinica-zmuic.wpcomstaging.com/wp-content/uploads/2026/03/IMG_0979-e1773062707201.jpeg" 
          alt="Dra. Alexandra Santos - Dermatologista" 
          style="width: 100%; height: auto; border-radius: 4px; display: block;">
   </div>
