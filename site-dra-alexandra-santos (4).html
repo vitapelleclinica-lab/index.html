@@ -397,21 +397,21 @@ section {
 }
 
 /* ===== ABOUT ===== */
-about {
+.about {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: stretch; /* Garante que a foto estique até o final do texto */
+  align-items: stretch; 
   padding: 0 !important;
-  overflow: visible;    /* MUDOU DE HIDDEN PARA VISIBLE */
+  overflow: visible !important; 
   background: var(--white);
 }
 
 .about-image {
   flex: 0 0 55%;
   position: relative;
-  overflow: visible;   /* MUDOU DE HIDDEN PARA VISIBLE */
-  display: flex;       /* Ajuda no alinhamento vertical */
+  overflow: visible !important;   
+  display: flex;      
 }
 
 .about-image img {
@@ -421,28 +421,20 @@ about {
   object-position: center top;
   display: block;
   position: relative;
-  z-index: 2;          /* Garante que a foto fique acima da moldura */
+  z-index: 2;          
 }
 
 .about-image::after {
   content: '';
   position: absolute;
-  /* Ajuste de posição para fora da foto */
   left: -20px;
   bottom: -20px;
-  
-  /* Tamanho do "L" */
   width: 150px; 
   height: 150px;
-  
-  /* Desenho da moldura */
   border-left: 1px solid #bfa36a;
   border-bottom: 1px solid #bfa36a;
-  
-  z-index: 1;          /* Colocamos 1 para ficar visível sobre o fundo */
+  z-index: 1;          
 }
-}
-
 .about-text-wrapper {
   flex: 1;
   display: flex;
