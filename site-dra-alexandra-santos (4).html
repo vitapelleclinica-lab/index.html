@@ -402,15 +402,15 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: stretch;
-  padding: 0 !important;
-  overflow: hidden;
+  padding: 30px; !important;
+  overflow: visible;
   background: var(--white);
 }
 
 .about-image {
-  flex: 0 0 55%;
+  flex: 0 0 50%;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .about-image img {
@@ -424,18 +424,14 @@ section {
 .about-image::after {
   content: '';
   position: absolute;
- left: -20px;       /* Joga para a esquerda */
-  bottom: -20px;     /* Joga para baixo */
-  
-  /* TAMANHO DO "L" */
-  width: 120px; 
-  height: 120px;
-  
-  /* O DESENHO DA MOLDURA */
-  border-left: 1px solid #bfa36a;
-  border-bottom: 1px solid #bfa36a;
-  
-  z-index: -1;       /* Garante que fique atrás da foto */
+  left: 10px;        /* Ajuste a posição para alinhar com o canto da foto */
+  bottom: 10px;      /* Ajuste a posição para alinhar com o canto da foto */
+  width: 150px;      /* Comprimento da linha */
+  height: 150px;     /* Altura da linha */
+  border-left: 1px solid #bfa36a;   /* Linha fina dourada */
+  border-bottom: 1px solid #bfa36a; /* Linha fina dourada */
+  z-index: 1;        /* Mantém visível */
+  pointer-events: none;
 }
 
 .about-text-wrapper {
