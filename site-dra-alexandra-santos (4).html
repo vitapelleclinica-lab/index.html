@@ -424,12 +424,18 @@ section {
 .about-image::after {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 80px;
-  height: 100%;
-  background: linear-gradient(to right, transparent, var(--white));
-  z-index: 2;
+ left: -20px;       /* Joga para a esquerda */
+  bottom: -20px;     /* Joga para baixo */
+  
+  /* TAMANHO DO "L" */
+  width: 120px; 
+  height: 120px;
+  
+  /* O DESENHO DA MOLDURA */
+  border-left: 1px solid #bfa36a;
+  border-bottom: 1px solid #bfa36a;
+  
+  z-index: -1;       /* Garante que fique atrás da foto */
 }
 
 .about-text-wrapper {
